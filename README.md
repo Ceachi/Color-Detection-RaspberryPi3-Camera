@@ -99,8 +99,36 @@ if you are not happy with the results, go to Step2 to make your own calibrations
 **Step2**
 
 * open test_camera.py
-* 
+* You only need to modify the Maximum and minimum HSV values from this matrix:
+```py
+        boundariesHSV = [
+            ([170, 109, 75], [180, 255, 255]),  # red
+            ([97, 55, 75], [125, 255, 255]),  # blue
+            ([4, 109, 75], [22, 255, 255]),  # yellow
+            ([78, 20, 40], [104, 255, 255])  # green
+        ]
 
+```
+Tips: only modify the 3 values from the minimum array, and the first value of the maximum array.  
+For example ([170, 109, 75], [180, 255, 255]),  # red, I will change only the values 170,109,75 and 180
+
+* How to find the right values? 
+* first run: 
+```py
+sudo python3 test_camera.py
+```
+this will make a photo inside the folder *'./finishImages/*  
+* now run:
+```py
+sudo python3 calibrate_camera.py
+```
+You will get the values like in this picture:  
+![alt text](http://url/to/img.png)
+
+- now get the values only on the minimum values on the array with label "1" and only the first element of the maximum array with the label "3", and put the new values inside the boundariesHSV[]. Rembemer, for the "1" array, get only the minimum values as possible, as well the maximum value of the first element in label"3" array
+
+After that, test_camera.py again, until you find all the right values for each of RGBY arrays. And test it again.
+In the end, paste boundariesHSV[] array values in the boundariesHSV[] array of test_camera_final.py.
 
 
 
