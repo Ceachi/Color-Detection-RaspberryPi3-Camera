@@ -5,6 +5,11 @@ Components:
 2. [Cameră Raspberry Pi V2](https://cleste.ro/camera-raspberry-pi-v2.html)
 3. [Camera cable 30cm](https://www.optimusdigital.ro/ro/camere/1352-camera-module-v2.html?gclid=Cj0KCQiA_rfvBRCPARIsANlV66M0R9YHRWtbHxZSUk8LLrREZshoa1mj4fY_iAEA_wM0ZHq7Rggle40aAsXoEALw_wcB)
 
+
+#Example
+* The project is similar to the video below, the only difference, is that it also have a script to identify the HSV values to calibrate the camera  
+|[![Example of Detecting Color using RaspberryPI](https://github.com/Ceachi/Color-Detection-RaspberryPi3-Camera/blob/master/images/example_color_detection.PNG)](https://www.youtube.com/watch?v=rVTab3WgynU)
+
 # Informations about the camera  
 1.Connect the camera to Raspberry.
 The connection of the camera is done through a serial interface dedicated to the camera. To locate this interface, see the attached image below.  
