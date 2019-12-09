@@ -14,7 +14,7 @@ Components:
 1.Connect the camera to Raspberry.
 The connection of the camera is done through a serial interface dedicated to the camera. To locate this interface, see the attached image below.  
 CAREFUL!!! Connect the module when the development board is stopped.  
-![alt text](http://url/to/img.png)  
+![alt text](https://github.com/Ceachi/Color-Detection-RaspberryPi3-Camera/blob/master/images/rpi.PNG)  
 2. Activate the camera.
 Camera activation is done by opening the menu and selecting  Preferences> Raspberry Pi Configuration Tool.   Once you have opened the configuration tool, select the INTERFACES  tab  and check the ENABLED box   next to the camera. Restart the Raspberry board and proceed to the next step. 
 Once you've connected your camera to the Raspberry Pi, an easy way to check if everything is working properly is to write a simple code in Python. 
@@ -90,8 +90,6 @@ First make sure you create an empty folder, in your current directory: "./finish
 **test_camera_final.py** -> this is the final script code, after you are making the calibration. This will return your detecting color
 **test_camera.py** -> this is used for calibration, run this first, then **calibrate_camera.py**
 **calibrate_camera.py** -> this will be used to calibrate the Max and Min values for your calibration (The HSV for every color you are trying to identify)
-![alt text](http://url/to/img.png)
-
 
 **Step1**  
 
@@ -128,7 +126,7 @@ this will make a photo inside the folder *'./finishImages/*
 sudo python3 calibrate_camera.py
 ```
 You will get the values like in this picture:  
-![alt text](http://url/to/img.png)
+![alt text](https://github.com/Ceachi/Color-Detection-RaspberryPi3-Camera/blob/master/images/values.PNG)
 
 - now get the values only on the minimum values on the array with label "1" and only the first element of the maximum array with the label "3", and put the new values inside the boundariesHSV[]. Rembemer, for the "1" array, get only the minimum values as possible, as well the maximum value of the first element in label"3" array
 
